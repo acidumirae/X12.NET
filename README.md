@@ -4,12 +4,12 @@
 
 --------
 
-[![Build Status](https://travis-ci.org/bvanfleet/X12.NET.svg?branch=DotNetCore)](https://travis-ci.org/bvanfleet/X12.NET)
+[![Build Status](https://travis-ci.org/bvanfleet/X12.NET.svg?branch=master)](https://travis-ci.org/acidumirae/X12.NET)
 
 X12.NET
 -------
 
-This is an open source .NET C# implementation of an X12 Parser. Originally forked from [Inteligenz/X12Parser](https://github.com/Inteligenz/X12Parser).
+This is an open source .NET C# implementation of an X12 Parser. Originally forked from [bvanfleet/X12.NET](https://github.com/bvanfleet/X12.NET).
 
 The parser allows for a specification of any X12 transaction set to create a generic X12 xml representation of the hierarchical data contained within the X12 document.
 
