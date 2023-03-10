@@ -200,11 +200,12 @@ IEA*1*000000031~";
         public void ElementValidationTwoArgsTester()
         {
             // arrange
-            var errorMessage = string.Join(
+            var expectedError = string.Join(
                 Environment.NewLine,
                 "Element NM1 cannot contain the value 'AB~CD' with the segment terminator.",
                 "Parameter name: NM1");
-            try
+
+	    try
             {
                 // act
                 throw new ElementValidationException("Element {0} cannot contain the value '{1}' with the segment terminator.", "NM1", "AB~CD");
@@ -212,7 +213,7 @@ IEA*1*000000031~";
             catch (ElementValidationException exc)
             {
                 // assert
-                Assert.AreEqual(errorMessage, exc.Message);
+                Assert.AreEqual(expectedError, exc.Message);
             }
         }
 
@@ -220,7 +221,7 @@ IEA*1*000000031~";
         public void ElementValidationThreeArgsTester()
         {
             // arrange
-            var errorMessage = string.Join(
+            var expectedError = string.Join(
                 Environment.NewLine,
                 "Element NM1 cannot contain the value 'AB~CD' with the segment terminator ~.",
                 "Parameter name: NM1");
@@ -233,7 +234,7 @@ IEA*1*000000031~";
             catch (ElementValidationException exc)
             {
                 // assert
-                Assert.AreEqual(errorMessage, exc.Message);
+                Assert.AreEqual(expectedError, exc.Message);
             }
         }
 
@@ -241,7 +242,7 @@ IEA*1*000000031~";
         public void ElementValidationFiveArgsTester()
         {
             // arrange
-            var errorMessage = string.Join(
+            var expectedError = string.Join(
                 Environment.NewLine,
                 "Element NM1 cannot contain the value 'AB~CD' with the segment terminator ~. Use a value without delimiters ~ * or :.",
                 "Parameter name: NM1");
@@ -254,7 +255,7 @@ IEA*1*000000031~";
             catch (ElementValidationException exc)
             {
                 // assert
-                Assert.AreEqual(errorMessage, exc.Message);
+                Assert.AreEqual(expectedError, exc.Message);
             }
         }
 
