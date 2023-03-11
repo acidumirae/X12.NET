@@ -1,23 +1,27 @@
 ﻿<?xml version="1.0"?>
 <package>
   <metadata>
-    <id>$id$</id>
+    <id>X12.Core.Parsing</id>
     <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <licenseUrl>https://github.com/bvanfleet/X12.NET/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>https://github.com/bvanfleet/X12.NET</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/wiki/bvanfleet/X12.NET/X12Icon.png</iconUrl>
+    <title>X12.Core.Parsing</title>
+    <authors>Anatolii Okhotnikov</authors>
+    <owners>Anatolii Okhotnikov</owners>
+    <licenseUrl>https://github.com/acidumirae/X12.NET/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/acidumirae/X12.NET</projectUrl>
+    <iconUrl>https://user-images.githubusercontent.com/2833617/224451539-1eb619c6-f0bb-4ac2-9e2a-b18fe29e7a47.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes> </releaseNotes>
-    <copyright>$copyright$</copyright>
+    <description>Open source parsing utilities for X12 document handling</description>
+    <releaseNotes>
+      * Segregated package from other X12 assemblies
+      * Added documentation to several code files
+      * Corrected several bugs and updated code to latest style and best coding practices
+    </releaseNotes>
+    <copyright>Copyright © Anatolii Okhotnikov 2023</copyright>
     <tags>X12 Parser</tags>
     <dependencies>
-      <dependency id="X12.Shared" version="$version$" />
-      <dependency id="X12.Specifications" version="$version$" />
-      <dependency id="X12.Transformations" version="$version$" />
+      <dependency id="X12.Core.Shared" version="$version$" />
+      <dependency id="X12.Core.Specifications" version="$version$" />
+      <dependency id="X12.Core.Transformations" version="$version$" />
     </dependencies>
   </metadata>
 </package>
