@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Globalization;
     using System.IO;
     using System.Linq;
     using System.Text;
@@ -151,7 +150,10 @@
         /// <param name="encoding">Stream encoding for reading data</param>
         /// <returns><see cref="Interchange"/> collection parsed from X12</returns>
         /// <exception cref="InvalidOperationException">Thrown on any missing segments or parent IDs</exception>
-        public List<Interchange> ParseMultiple(Stream stream, Encoding encoding)
+        /// <exception cref="TransactionValidationException">
+        /// Thrown if segment cannot be identified and validated against the current specification
+        /// </exception>
+	public List<Interchange> ParseMultiple(Stream stream, Encoding encoding)
         {
             var envelopes = new List<Interchange>();
 
