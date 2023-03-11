@@ -18,5 +18,10 @@
     </releaseNotes>
     <copyright>Copyright © Anatolii Okhotnikov 2023</copyright>
     <tags>X12 Parser</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="netstandard2.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="netstandard2.0" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="netstandard2.0" />
+    </frameworkAssemblies>
   </metadata>
 </package>
