@@ -1,4 +1,6 @@
-﻿namespace X12.Core.Tests.Unit.DocumentationCodeSamples.X12InterchangeModel
+﻿using System.Globalization;
+
+namespace X12.Core.Tests.Unit.DocumentationCodeSamples.X12InterchangeModel
 {
     using System;
     using System.Diagnostics;
@@ -212,13 +214,13 @@ IEA*1*000000031~
             member.NM109_IdCode = "11122333301";
 
             TypedSegmentDMG birthday = member.AddSegment(new TypedSegmentDMG());
-            birthday.DMG02_DateOfBirth = DateTime.Parse("05/19/1943");
+            birthday.DMG02_DateOfBirth = new DateTime(1943, 5, 19);
 
             TypedSegmentDTP subscribeDate = member.AddSegment(new TypedSegmentDTP());
             subscribeDate.DTP01_DateTimeQualifier = DTPQualifier.Plan;
             subscribeDate.DTP02_DateTimePeriodFormatQualifier = DTPFormatQualifier.CCYYMMDD;
-            subscribeDate.DTP03_Date = new DateTimePeriod(DateTime.Parse("05/01/2006"));
-            
+            subscribeDate.DTP03_Date = new DateTimePeriod(new DateTime(2006, 5, 1));
+ 
             member.AddLoop("EQ*30");
 
             Assert.AreEqual("HL*3*2*22*0~TRN*1*93175-012547*9877281234~NM1*IL*1*SMITH*ROBERT*MI****11122333301~DMG*D8*19430519~DTP*291*D8*20060501~EQ*30~", hL3Info.SerializeToX12(false));
