@@ -4,7 +4,7 @@
 
 --------
 
-[![Build Status](https://travis-ci.org/bvanfleet/X12.NET.svg?branch=master)](https://travis-ci.org/acidumirae/X12.NET)
+[![Build Status](https://travis-ci.org/bvanfleet/X12.NET.svg?branch=master)](https://travis-ci.org/acidumirae/X12.NET)  [![x12net MyGet Build Status](https://www.myget.org/BuildSource/Badge/x12net?identifier=)](https://www.myget.org/)
 
 X12.NET
 -------
