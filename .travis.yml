@@ -10,9 +10,9 @@ script:
   - dotnet test ./tests/X12.Core.Tests.Integration/X12.Core.Tests.Integration.csproj
   - dotnet test ./tests/X12.Core.Tests.Unit/X12.Core.Tests.Unit.csproj
   - dotnet test ./tests/X12.Core.Validation.Tests.Unit/X12.Core.Validation.Tests.Unit.csproj
-deploy:
-  skip-cleanup: true
-  provider: script
-  script: chmod +x ./deploy.sh && ./deploy.sh $NUGET_API_KEY $NUGET_SOURCE $TRAVIS_BUILD_NUMBER
-  on:
-    branch: master
+#deploy:
+#  skip-cleanup: true
+#  provider: script
+#  script: chmod +x ./deploy.sh && ./deploy.sh $NUGET_API_KEY $NUGET_SOURCE $TRAVIS_BUILD_NUMBER
+#  on:
+#    branch: master
